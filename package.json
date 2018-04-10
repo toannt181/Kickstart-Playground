@@ -12,7 +12,7 @@
     "lint": "eslint app/**/*.js"
   },
   "lint-staged": {
-    "*.js": "eslint",
+    "*.js": "eslint app/**/*.js"
   },
   "author": "",
   "license": "ISC",
