@@ -8,13 +8,11 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production --config webpack.config.build.js",
     "test": "cross-env NODE_ENV=production",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "lint": "eslint app/**/*.js"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.js": "eslint",
   },
   "author": "",
   "license": "ISC",

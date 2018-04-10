@@ -1,7 +1,6 @@
 module.exports = {
     "extends": "airbnb",
     "plugins": [
-        "redux-saga",
         "react",
         "jsx-a11y"
     ],
