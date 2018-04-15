@@ -1,23 +1,19 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom'
-
-import Demo from '../Demo'
 import './style.scss'
+
+import Route from '../Route'
+import Test from '../Test'
+import Link from '../Link';
 
 class App extends React.PureComponent {
   render() {
     return (
-      <Router>
-        <div className="container">
-          <nav>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/">Home</Link>
-          </nav>
-          <div>
-            <Route path="/dashboard" component={Demo} />
-          </div>
-        </div>
-      </Router>
+      <div className="container">
+        <h1>Router demo</h1>
+        <Link to="/">Home</Link>
+        <Link to="/test">Test</Link>
+        <Route path="/test" component={Test} />
+      </div>
     )
   }
 }

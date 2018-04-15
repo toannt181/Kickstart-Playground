@@ -8,27 +8,32 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production --config webpack.config.build.js",
     "test": "cross-env NODE_ENV=production",
-    "pre-commit": "lint",
-    "lint": "eslint app/**/*.js"
+    "lint": "eslint --fix app --ext .js"
   },
   "lint-staged": {
     "*.js": "lint"
   },
+  "pre-commit": "lint",
   "author": "",
   "license": "ISC",
   "dependencies": {
     "animejs": "^2.2.0",
+    "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "4.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.1",
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",

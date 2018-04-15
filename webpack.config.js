@@ -3,6 +3,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const webpack = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: './app/app.js',
@@ -15,7 +16,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'host'),
     compress: true,
     port: 9001,
-    open: true,
+    open: false,
     staticOptions: {
       redirect: false
     },
@@ -50,5 +51,8 @@ module.exports = {
       title: 'My App',
       template: path.resolve(__dirname, 'app/index.html')
     }),
+    new CopyWebpackPlugin([
+      { from: 'app/images', to: '' }
+    ]),
   ]
 }

@@ -1,16 +1,11 @@
 import React from 'react'
-import './style.scss'
 
-class Demo extends React.PureComponent {
+class Test extends React.PureComponent {
   render() {
-    console.log('o')
     return (
-      <div className="box">
-        this test box
-        this test box
-      </div>
+      <h2>        this test box      </h2>
     )
   }
 }
 
-export default Demo
+export default Test

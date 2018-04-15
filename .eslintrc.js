@@ -4,12 +4,11 @@ module.exports = {
         "react",
         "jsx-a11y"
     ],
+    "parser": "babel-eslint",
     "parserOptions": {
-        "ecmaVersion": 6,
         "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
+        "allowImportExportEverywhere": false,
+        "codeFrame": false
     },
     "env": {
         "browser": true,
