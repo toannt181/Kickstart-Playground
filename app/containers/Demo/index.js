@@ -1,19 +1,16 @@
 import React from 'react'
+import { Route, Link, withRouter } from 'react-router-dom'
+
 import Test from '../Test'
-import { Link, Route } from 'react-router-dom'
-import './style.scss'
 
 class Demo extends React.PureComponent {
   render() {
+    console.log('demo render')
     return (
       <div className="container">
-        <nav>
-          <Link to="/dashboard/test">Test</Link>
-          <Link to="/">Home</Link>
-        </nav>
-        <div>
-          <Route path="/dashboard/test" component={Test} />
-        </div>
+        <h2>Demo container</h2>
+        <nav><Link to="/Dashboard/test">To test</Link></nav>
+        <Route path="/Dashboard/test" component={Test} />
       </div>
     )
   }

@@ -1,23 +1,32 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, withRouter } from 'react-router-dom'
-
-import Demo from '../Demo'
 import './style.scss'
+import Demo from '../Demo'
 
-class App extends React.PureComponent {
+class App extends React.Component {
+  componentWillReceiveProps(...rest) {
+    console.log('componentWillReceiveProps', rest)
+  }
+
+  shouldComponentUpdate(...rest) {
+    console.log('shouldComponentUpdate', rest)
+    return true
+  }
+
+  componentWillUpdate(...rest) {
+    console.log('componentWillUpdate', rest)
+  }
+
   render() {
     return (
-      <Router>
-        <div className="container">
-          <nav>
-            <Link to="/dashboard">Dashboard</Link>
-            <Link to="/">Home</Link>
-          </nav>
-          <div>
-            <Route path="/dashboard" component={Demo} />
-          </div>
+      <div className="container">
+        <h1>app com</h1>
+        <nav><Link to="/Dashboard">Dashboard</Link></nav>
+        <nav><Link to="/">Home</Link></nav>
+        <div>
+          <Route path="/Dashboard" component={Demo} />
         </div>
-      </Router>
+      </div>
     )
   }
 }
