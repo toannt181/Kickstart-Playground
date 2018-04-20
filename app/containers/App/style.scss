@@ -2,6 +2,26 @@
   position: relative;
 }
 
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list {
+  border: 1px solid whitesmoke;
+  padding: 16px;
+  width: 25%;
+  .note {
+    padding: 32px 16px;
+    &:nth-child(odd) {
+      background: tomato;
+      color: white;
+    }
+  }
+}
+
 .button {
   background: #fff;
   border: none;
