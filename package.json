@@ -13,7 +13,7 @@
   "lint-staged": {
     "*.js": "lint"
   },
-  "pre-commit": "lint",
+  // "pre-commit": "lint",
   "author": "",
   "license": "ISC",
   "dependencies": {
