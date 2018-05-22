@@ -15,7 +15,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'host'),
     compress: true,
     port: 9001,
-    open: true,
     staticOptions: {
       redirect: false
     },

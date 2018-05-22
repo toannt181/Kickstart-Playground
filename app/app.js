@@ -1,17 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import App from './containers/App'
+import ReactDOM from './ReactDom'
 
-const MOUNT_NODE = document.getElementById('app')
+const element = {
+  type: 'h1',
+  props: {
+    id: 'title',
+    children: [
+      { type: 'input', props: { value: 'foo', type: 'text' } },
+      { type: 'a', props: { href: '/bar' } },
+      {
+        type: 'span',
+        props: {
+          children: [{
+            type: 'TEXT_ELEMENT',
+            props: { nodeValue: 'Foo' },
+          }],
+        },
+      },
+    ],
+  },
+}
 
-const app = (
-  <Router>
-    <App />
-  </Router>
-)
-
-ReactDOM.render(
-  app,
-  MOUNT_NODE
-)
+ReactDOM.render(element, document.querySelector('#app'))

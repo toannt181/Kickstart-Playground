@@ -24,5 +24,6 @@ module.exports = {
             "always-multiline"
         ],
         'react/prefer-stateless-function': 0,
+        'arrow-parens': 0,
     }
 }
