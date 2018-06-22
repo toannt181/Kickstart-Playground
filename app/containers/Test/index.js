@@ -2,8 +2,9 @@ import React from 'react'
 
 class Test extends React.PureComponent {
   render() {
+    console.log(this.props)
     return (
-      <h2>        this test box      </h2>
+      <h2>{this.props.title} + {this.props.children.childrenFactory(123)}</h2>
     )
   }
 }

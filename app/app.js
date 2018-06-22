@@ -1,32 +1,34 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import { observable } from 'mobx'
+import { BrowserRouter as Router } from 'react-router-dom'
 import App from './containers/App'
 
 const MOUNT_NODE = document.getElementById('app')
 
-const appState = observable({
-  name: 'helo',
-})
-
 const app = (
   <Router>
-    <App appState={appState} />
+    <App />
   </Router>
 )
 
-class T {
-  @decorator name = { toan: 'ha' }
+// ReactDOM.render(
+//   app,
+//   MOUNT_NODE
+// )
+'use strict';
+
+class Cat {
+  @readonly
+  t = 1
+  
+  @readonly
+  meow() {
+    return 'Say meow!'
+  }
 }
 
-window.T = T
-
-function decorator(target) {
-  target.edited = true;
+function readonly(target, name, descriptor) {
+  descriptor.writable = false
 }
 
-ReactDOM.render(
-  app,
-  MOUNT_NODE
-)
+window.Cat = Cat

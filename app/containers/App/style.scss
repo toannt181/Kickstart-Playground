@@ -1,32 +1,24 @@
-.container {
-  position: relative;
+.example-enter {
+  opacity: 0.01;
 }
 
-.button {
-  background: #fff;
-  border: none;
-  width: 100px;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
-  cursor: pointer;
-  font-size: 19px;
-  font-weight: 300;
-  margin: 5px;
-  padding: 12px 15px;
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
 }
 
-.flying {
-  position: absolute;
-  animation: myship .6s;
+.example-leave {
+  opacity: 1;
 }
 
-@keyframes myship {
-  from {
-    top: 0px;
-    left: 0px;
-  }
-  to {
-    top: 200px;
-    left: 300px;
-  }
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.item {
+  background-color: aquamarine;
+  padding: 8px 32px;
+  border-radius: 4px;
+  margin: 4px;
 }
